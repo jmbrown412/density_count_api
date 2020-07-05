@@ -25,9 +25,10 @@ def seed_data(spaces=1, door_ways=1, person_enters_per_door=4, person_leaves_per
     :param door_ways:
     :param person_enters_per_door:
     :param person_leaves_per_door:
-    :param days_time_delta:
     :return:
     """
+
+    # TODO - Break apart into different functions for different actions. i.e. Creating Space, DPU, etc?
     # Create space(s)
     for i in range(0, spaces):
         space = Space()
@@ -77,6 +78,7 @@ def seed_data(spaces=1, door_ways=1, person_enters_per_door=4, person_leaves_per
 
 
 app = Flask(__name__)
+# TODO - Use ENV VAR for DB location
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///C:\Work\Fun\density-api\dbdensity.db'
 db = SQLAlchemy(app)
 
