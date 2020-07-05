@@ -77,6 +77,7 @@ def seed_data(spaces=1, door_ways=1, person_enters_per_door=4, person_leaves_per
     print(f'A GET to \'http://127.0.0.1:5000/spaces/{space.id}?time={time_left}\' should return a count of 4')
 
 
+# TODO - Add Swagger to API.
 app = Flask(__name__)
 # TODO - Use ENV VAR for DB location
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///C:\Work\Fun\density-api\dbdensity.db'
